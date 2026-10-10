@@ -1,0 +1,117 @@
+# Preparation path. Keep its course registration draft until content is ready.
+apiVersion: content.astrona.io/v1alpha1
+kind: TrainingPath
+metadata:
+  id: ATP006
+  slug: certified-kubernetes-application-developer-ckad
+  title: Certified Kubernetes Application Developer (CKAD)
+  description: 'Preparation path for CKAD: one training series per curriculum domain. Content authoring
+    is planned.'
+  version: 0.1.0
+  language: en
+  authors:
+  - name: Paris Nakita Kejser
+    email: paris@astrona.io
+    company: Astrona.io
+  tags:
+  - CKAD
+  - Certification Preparation
+  license: Apache-2.0
+spec:
+  audience: Learners preparing for Certified Kubernetes Application Developer (CKAD).
+  difficulty: Intermediate
+  examPreparation:
+    enabled: true
+    title: Certified Kubernetes Application Developer (CKAD)
+    officialSyllabusUrl: https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/
+    examId: CKAD
+    provider: CNCF / The Linux Foundation
+  prerequisites:
+  - Basic command-line knowledge and familiarity with the subject of the exam.
+  - A computer capable of running the environments selected during content authoring.
+  learningOutcomes:
+  - Prepare for the Application Design and Build domain.
+  - Prepare for the Application Deployment domain.
+  - Prepare for the Application Observability and Maintenance domain.
+  - Prepare for the Application Environment, Configuration and Security domain.
+  - Prepare for the Services and Networking domain.
+  stages:
+  - id: ATP006-STG001
+    title: Application Design and Build
+    description: Prepare for Application Design and Build.
+    examDomain: Application Design and Build
+    weight: 20
+    learningOutcomes:
+    - Define, build and modify container images
+    - Choose and use the right workload resource (Deployment, DaemonSet, CronJob, etc.)
+    - Understand multi-container Pod design patterns (e.g. sidecar, init and others)
+    - Utilize persistent and ephemeral volumes
+    content:
+    - ref: ATS027
+      repository: https://github.com/astrona-io/ATS027
+      path: .
+      version: 0.1.0
+  - id: ATP006-STG002
+    title: Application Deployment
+    description: Prepare for Application Deployment.
+    examDomain: Application Deployment
+    weight: 20
+    learningOutcomes:
+    - Use Kubernetes primitives to implement common deployment strategies (e.g. blue/green or canary)
+    - Understand Deployments and how to perform rolling updates
+    - Use the Helm package manager to deploy existing packages
+    - Kustomize
+    content:
+    - ref: ATS001
+      repository: https://github.com/astrona-io/ATS001
+      path: .
+      version: 1.0.0
+  - id: ATP006-STG003
+    title: Application Observability and Maintenance
+    description: Prepare for Application Observability and Maintenance.
+    examDomain: Application Observability and Maintenance
+    weight: 15
+    learningOutcomes:
+    - Understand API deprecations
+    - Implement probes and health checks
+    - Use built-in CLI tools to monitor Kubernetes applications
+    - Utilize container logs
+    - Debugging in Kubernetes
+    content:
+    - ref: ATS028
+      repository: https://github.com/astrona-io/ATS028
+      path: .
+      version: 0.1.0
+  - id: ATP006-STG004
+    title: Application Environment, Configuration and Security
+    description: Prepare for Application Environment, Configuration and Security.
+    examDomain: Application Environment, Configuration and Security
+    weight: 25
+    learningOutcomes:
+    - Discover and use resources that extend Kubernetes (CRD, Operators)
+    - Understand authentication, authorization and admission control
+    - Understand requests, limits, quotas
+    - Understand ConfigMaps
+    - Define resource requirements
+    - Create & consume Secrets
+    - Understand ServiceAccounts
+    - Understand Application Security (SecurityContexts, Capabilities, etc.)
+    content:
+    - ref: ATS029
+      repository: https://github.com/astrona-io/ATS029
+      path: .
+      version: 0.1.0
+  - id: ATP006-STG005
+    title: Services and Networking
+    description: Prepare for Services and Networking.
+    examDomain: Services and Networking
+    weight: 20
+    learningOutcomes:
+    - Demonstrate basic understanding of NetworkPolicies
+    - Provide and troubleshoot access to applications via services
+    - Use Ingress rules to expose applications
+    content:
+    - ref: ATS030
+      repository: https://github.com/astrona-io/ATS030
+      path: .
+      version: 0.1.0
