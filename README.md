@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://astrona.io/courses/certified-kubernetes-application-developer-ckad">
+    <img src="https://astrona.io/courses/certified-kubernetes-application-developer-ckad/banner.svg" alt="Certified Kubernetes Application Developer: exam domains on Astrona" width="100%">
+  </a>
+</p>
+
 # ATP006 — Certified Kubernetes Application Developer (CKAD)
 
 Preparation scaffold: one stage per exam domain, connected through `path.yaml`
